@@ -34,7 +34,7 @@ export default function MillorsVideosPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <NavbarMain />
-      <div className="pt-16">
+      <div className="pt-20">
         {/* Hero Section */}
         <div className="bg-selectivi-yellow py-16 px-4 md:px-8">
           <div className="container mx-auto max-w-6xl">

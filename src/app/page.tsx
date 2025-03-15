@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
       <NavbarMain />
-      <div className="pt-16">
+      <div className="pt-20">
         <HeroMain />
         <SectionCategories />
         <SectionWhySelectiviCat />
