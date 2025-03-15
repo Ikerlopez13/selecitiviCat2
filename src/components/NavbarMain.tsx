@@ -18,9 +18,9 @@ export default function NavbarMain() {
               <ul className="p-2 bg-white">
                 <li><Link href="/categories" className="hover:text-selectivi-yellow">Totes les categories</Link></li>
                 <li><Link href="/categoria/comunes" className="hover:text-selectivi-yellow">Comunes</Link></li>
-                <li><Link href="/categoria/cientifico" className="hover:text-selectivi-yellow">Científic i Tecnològic</Link></li>
-                <li><Link href="/categoria/artistico" className="hover:text-selectivi-yellow">Artístic</Link></li>
-                <li><Link href="/categoria/lenguas" className="hover:text-selectivi-yellow">Llengües</Link></li>
+                <li><Link href="/categoria/tecnologic" className="hover:text-selectivi-yellow">Científic i Tecnològic</Link></li>
+                <li><Link href="/categoria/artistic" className="hover:text-selectivi-yellow">Artístic</Link></li>
+                <li><Link href="/categoria/llengues" className="hover:text-selectivi-yellow">Llengües</Link></li>
                 <li><Link href="/categoria/social" className="hover:text-selectivi-yellow">Social</Link></li>
               </ul>
             </li>
@@ -42,9 +42,9 @@ export default function NavbarMain() {
               <ul className="p-2 bg-white shadow-md rounded-md z-[100]">
                 <li><Link href="/categories" className="hover:text-selectivi-yellow">Totes les categories</Link></li>
                 <li><Link href="/categoria/comunes" className="hover:text-selectivi-yellow">Comunes</Link></li>
-                <li><Link href="/categoria/cientifico" className="hover:text-selectivi-yellow">Científic i Tecnològic</Link></li>
-                <li><Link href="/categoria/artistico" className="hover:text-selectivi-yellow">Artístic</Link></li>
-                <li><Link href="/categoria/lenguas" className="hover:text-selectivi-yellow">Llengües</Link></li>
+                <li><Link href="/categoria/tecnologic" className="hover:text-selectivi-yellow">Científic i Tecnològic</Link></li>
+                <li><Link href="/categoria/artistic" className="hover:text-selectivi-yellow">Artístic</Link></li>
+                <li><Link href="/categoria/llengues" className="hover:text-selectivi-yellow">Llengües</Link></li>
                 <li><Link href="/categoria/social" className="hover:text-selectivi-yellow">Social</Link></li>
               </ul>
             </details>

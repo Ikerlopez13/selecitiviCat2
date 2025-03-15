@@ -11,13 +11,15 @@ interface CategoryPageProps {
 }
 
 export default function CategoryPage({ params }: CategoryPageProps) {
-  const category = getCategoryById(params.id);
+  // Convertir params.id a string para evitar el error
+  const categoryId = String(params.id);
+  const category = getCategoryById(categoryId);
   
   if (!category) {
     notFound();
   }
   
-  const subjects = getSubjectsByCategory(params.id);
+  const subjects = getSubjectsByCategory(categoryId);
   
   return (
     <div className="min-h-screen flex flex-col">

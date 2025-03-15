@@ -11,7 +11,9 @@ interface SubjectPageProps {
 }
 
 export default function SubjectPage({ params }: SubjectPageProps) {
-  const subject = getSubjectById(params.id);
+  // Convertir params.id a string para evitar el error
+  const subjectId = String(params.id);
+  const subject = getSubjectById(subjectId);
   
   if (!subject) {
     notFound();
