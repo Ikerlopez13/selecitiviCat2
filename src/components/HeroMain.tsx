@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import AnimateOnScroll from './AnimateOnScroll';
+import SearchBar from './SearchBar';
+import { categories } from '@/data/subjects';
 
 export default function HeroMain() {
   return (
@@ -42,22 +44,38 @@ export default function HeroMain() {
             
             <AnimateOnScroll animation="slideUp" delay={0.6}>
               <div className="pt-4">
-                <div className="join">
-                  <input 
-                    className="input join-item w-full md:w-80 focus:outline-none focus:border-white" 
-                    placeholder="Cerca itineraris, assignatures..."
-                  />
-                  <button className="btn join-item bg-white text-selectivi-yellow hover:bg-white/90 flex items-center gap-2 border-none">
-                    Filtra
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </button>
-                  <button className="btn join-item bg-white text-selectivi-yellow hover:bg-white/90 border-none">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                    </svg>
-                  </button>
+                <SearchBar 
+                  placeholder="Cerca itineraris, assignatures..."
+                  onSearch={(results) => {
+                    console.log('Resultados de búsqueda:', results);
+                  }}
+                />
+              </div>
+            </AnimateOnScroll>
+            
+            <AnimateOnScroll animation="slideUp" delay={0.8}>
+              <div className="pt-4">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="text-white font-medium">Categories populars:</span>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {categories.map((category) => (
+                    <Link 
+                      key={category.id}
+                      href={`/categoria/${category.id}`}
+                      className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-white/20 text-white hover:bg-white/30 transition-colors"
+                    >
+                      <span className="mr-1">{category.icon}</span>
+                      {category.name}
+                    </Link>
+                  ))}
+                  <Link 
+                    href="/categories"
+                    className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-white/10 text-white hover:bg-white/20 transition-colors"
+                  >
+                    <span className="mr-1">🔍</span>
+                    Veure totes
+                  </Link>
                 </div>
               </div>
             </AnimateOnScroll>

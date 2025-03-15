@@ -13,6 +13,17 @@ export default function NavbarMain() {
           <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[100] p-2 shadow bg-white rounded-box w-52">
             <li><Link href="/calculadora" className="hover:text-selectivi-yellow">Calculadora</Link></li>
             <li><Link href="/notes-de-tall" className="hover:text-selectivi-yellow">Notes de tall</Link></li>
+            <li>
+              <a className="hover:text-selectivi-yellow">Assignatures</a>
+              <ul className="p-2 bg-white">
+                <li><Link href="/categories" className="hover:text-selectivi-yellow">Totes les categories</Link></li>
+                <li><Link href="/categoria/comunes" className="hover:text-selectivi-yellow">Comunes</Link></li>
+                <li><Link href="/categoria/cientifico" className="hover:text-selectivi-yellow">Científic i Tecnològic</Link></li>
+                <li><Link href="/categoria/artistico" className="hover:text-selectivi-yellow">Artístic</Link></li>
+                <li><Link href="/categoria/lenguas" className="hover:text-selectivi-yellow">Llengües</Link></li>
+                <li><Link href="/categoria/social" className="hover:text-selectivi-yellow">Social</Link></li>
+              </ul>
+            </li>
             <li><Link href="/millors-videos" className="hover:text-selectivi-yellow">Millors Videos</Link></li>
             <li><Link href="/premium" className="hover:text-selectivi-yellow">Fes-te Premium ✨</Link></li>
           </ul>
@@ -25,6 +36,19 @@ export default function NavbarMain() {
         <ul className="menu menu-horizontal px-1">
           <li><Link href="/calculadora" className="text-base font-medium hover:text-selectivi-yellow transition-colors">Calculadora</Link></li>
           <li><Link href="/notes-de-tall" className="text-base font-medium hover:text-selectivi-yellow transition-colors">Notes de tall</Link></li>
+          <li>
+            <details>
+              <summary className="text-base font-medium hover:text-selectivi-yellow transition-colors">Assignatures</summary>
+              <ul className="p-2 bg-white shadow-md rounded-md z-[100]">
+                <li><Link href="/categories" className="hover:text-selectivi-yellow">Totes les categories</Link></li>
+                <li><Link href="/categoria/comunes" className="hover:text-selectivi-yellow">Comunes</Link></li>
+                <li><Link href="/categoria/cientifico" className="hover:text-selectivi-yellow">Científic i Tecnològic</Link></li>
+                <li><Link href="/categoria/artistico" className="hover:text-selectivi-yellow">Artístic</Link></li>
+                <li><Link href="/categoria/lenguas" className="hover:text-selectivi-yellow">Llengües</Link></li>
+                <li><Link href="/categoria/social" className="hover:text-selectivi-yellow">Social</Link></li>
+              </ul>
+            </details>
+          </li>
           <li><Link href="/millors-videos" className="text-base font-medium hover:text-selectivi-yellow transition-colors">Millors Videos</Link></li>
           <li><Link href="/premium" className="text-base font-medium hover:text-selectivi-yellow transition-colors">Fes-te Premium ✨</Link></li>
         </ul>
